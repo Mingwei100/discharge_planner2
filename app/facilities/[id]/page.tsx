@@ -18,7 +18,7 @@ export default function FacilityDetailsPage({ params }: { params: { id: string }
       topAttributes={facility.topAttributes}
       description= {facility.description}
       price={facility.price}
-      images={[sampleImage.src,localImage1.src,localImage2.src,localImage3.src,localImage4.src]}
+      images={[localImage1.src,localImage2.src,localImage3.src,localImage4.src,localImage5.src]}
     />
   );
 }
