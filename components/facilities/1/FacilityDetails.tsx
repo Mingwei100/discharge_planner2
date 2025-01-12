@@ -9,7 +9,7 @@ import {CheckCircle } from "lucide-react"
 import React, { useEffect, useRef } from "react"
 import Script from 'next/script'
 import localPanoramaImage from '@/assets/pannellum.jpg'
-import localPanoramaImage2 from '@/assets/pannellum.jpg'
+import localPanoramaImage2 from '@/assets/pannellum2.jpg'
 
 import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer"
 
