@@ -101,10 +101,11 @@ export function ReportsComponent() {
   const isFacilityAssigned = (facilityId: string) => {
     return assignments[contextPatient]?.includes(facilityId) || false
   }
-
   const filteredFacilities = facilities.filter(facility => {
-    const nameMatch = true;
-    const locationMatch = true;//facility.location.toLowerCase().includes(searchTerm.toLowerCase());
+    const nameMatch = (!geocodeResult || !geocodeResult.result) ? 
+      facility.name.toLowerCase().includes(searchTerm.toLowerCase()) : 
+      true;
+    const locationMatch = true;
     const capacityMatch = capacityFilter === "" || capacityFilter === "any" || parseInt(facility.capacity) <= parseInt(capacityFilter);
     const alwMatch = alwFilter === "" || alwFilter === "any" || facility.alwStatus === alwFilter;
     const vacanciesMatch = vacanciesFilter === "" || vacanciesFilter === "any" || facility.vacancies >= parseInt(vacanciesFilter);
